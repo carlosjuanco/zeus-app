@@ -53,14 +53,14 @@
 
 <script>
     import { ref } from 'vue'
-    // import { useStore } from 'vuex'
+    import { useStore } from 'vuex'
     // import { useRouter } from 'vue-router'
     // import helpers from '../helpers'
 
     export default {
         name: 'AppLogin',
         setup () {
-            // const store = useStore()
+            const store = useStore()
             // const router = useRouter()
             // const { handleErrors } = helpers()
 
@@ -73,22 +73,22 @@
                 }
             })
 
-            /*const login = async () => {
+            const login = async () => {
                 loading.value = true
 
                 try {
                     await store.dispatch('login', form.value.data)
 
                     form.value.errors = {}
-                    router.replace({ name: 'navbar' })
+                    // router.replace({ name: 'navbar' })
                 }
                 catch (error) {
-                    form.value.errors = handleErrors(error)
+                    // form.value.errors = handleErrors(error)
                     loading.value = false
                 }
-            }*/
+            }
 
-            return { loading, form }
+            return { loading, form, login }
         }
     }
 </script>
