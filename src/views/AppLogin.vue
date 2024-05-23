@@ -14,13 +14,13 @@
                                         <div class="control">
                                             <input
                                                 type="text"
-                                                :class="{'input is-family-monospace has-text-centered': true, 'is-danger': form.errors.username}"
-                                                v-model="form.data.username"
+                                                :class="{'input is-family-monospace has-text-centered': true, 'is-danger': form.errors.email}"
+                                                v-model="form.data.email"
                                                 placeholder="Usuario"
                                             >
                                         </div>
 
-                                        <strong class="help is-danger" v-text="form.errors.username" v-if="form.errors.username"></strong>
+                                        <strong class="help is-danger" v-text="form.errors.email" v-if="form.errors.email"></strong>
                                     </div>
 
                                     <div class="field">
@@ -68,7 +68,7 @@
             let form = ref({
                 errors: {},
                 data: {
-                    username: '',
+                    email: '',
                     password: ''
                 }
             })
