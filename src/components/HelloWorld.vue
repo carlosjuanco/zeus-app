@@ -27,14 +27,35 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <a class="navbar-item" @click="logout">
+        Cerrar sesión
+    </a>
   </div>
 </template>
 
 <script>
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  setup() {
+    const store = useStore()
+    const router = useRouter()
+    const logout = async () => {
+        try {
+            await store.dispatch('logout')
+
+            router.replace({ name: 'login' })
+        }
+        catch (error) {
+            // handleErrors(error)
+        }
+    }
+    return {logout}
   }
 }
 </script>

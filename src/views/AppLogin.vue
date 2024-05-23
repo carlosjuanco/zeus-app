@@ -54,14 +54,14 @@
 <script>
     import { ref } from 'vue'
     import { useStore } from 'vuex'
-    // import { useRouter } from 'vue-router'
+    import { useRouter } from 'vue-router'
     // import helpers from '../helpers'
 
     export default {
         name: 'AppLogin',
         setup () {
             const store = useStore()
-            // const router = useRouter()
+            const router = useRouter()
             // const { handleErrors } = helpers()
 
             let loading = ref(false)
@@ -80,7 +80,7 @@
                     await store.dispatch('login', form.value.data)
 
                     form.value.errors = {}
-                    // router.replace({ name: 'navbar' })
+                    router.replace({ name: 'helloworld' })
                 }
                 catch (error) {
                     // form.value.errors = handleErrors(error)
