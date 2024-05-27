@@ -11,9 +11,11 @@
     "axios": "^1.7.2",
     "bulma": "^1.0.1",
     "core-js": "^3.8.3",
+    "vee-validate": "^4.12.8",
     "vue": "^3.2.41",
     "vue-router": "^4.0.13",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
