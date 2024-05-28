@@ -2,7 +2,7 @@
     <section class="section">
         <div class="columns is-centered">
             <div class="column is-5">
-                <nav class="panel"> 
+                <nav class="panel animate__animated animate__backInUp"> 
                     <p class="panel-heading"> 
                         Acceso al sistema 
                     </p> 
@@ -79,22 +79,11 @@
             let loading = ref(false)
             let show_modal_notification = ref(false)
             let data_modal_notification = ref({})
-            // let form = ref({
-            //     errors: {},
-            //     data: {
-            //         email: '',
-            //         password: ''
-            //     }
-            // })
 
             const login = async (values) => {
                 loading.value = true
-                // alert(JSON.stringify(values, null, 2))
-                // alert(values.email)
-                // alert(values.password)
 
                 try {
-
                     await store.dispatch('login', values)
 
                     // form.value.errors = {}

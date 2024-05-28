@@ -32,15 +32,22 @@ const helpers = () => {
     }
 
     const handleErrors = error => {
-        let message = ''
+        let errors = {}
         if (error.response) {
-            message = error.response.data.error
+            if (error.response.data.errors) {
+                Object.entries(error.response.data.errors).map(item => {
+                    errors[item[0]] = item[1][0]
+                })
+            }
+            else {
+                errors['message'] = error.response.data.message
+            }
         }
         else {
-           message = error.message
+           errors['message'] = error.message
         }
 
-        return message
+        return errors
     }
 
     const logout = async () => {

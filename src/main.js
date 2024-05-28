@@ -4,6 +4,7 @@ import router from './router/index.ts'
 import store from './store/index.js'
 import 'bulma/css/bulma.css'
 import axios from 'axios'
+import 'animate.css';
 
 const api_token = localStorage.getItem('api_token')
 
