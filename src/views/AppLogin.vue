@@ -86,8 +86,7 @@
                 try {
                     await store.dispatch('login', values)
 
-                    // form.value.errors = {}
-                    router.replace({ name: 'helloworld' })
+                    router.replace({ name: store.getters.pages[0].name })
                 }
                 catch (error) {
                     data_modal_notification.value.title = 'Advertencia'
