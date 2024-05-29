@@ -33,6 +33,7 @@ export default createStore({
 
             commit('SET_API_TOKEN', api_token)
             commit('SET_USER', response.data.user)
+            commit('SET_PAGES', response.data.pages)
         },
         async check ({ commit }) {
             const response = await axios.get('/check')

@@ -3,6 +3,7 @@ import store from '../store/index.js'
 
 import AppLogin from "../views/AppLogin.vue";
 import HelloWord from "../components/HelloWorld.vue";
+import AppHome from "../views/AppHome.vue";
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
       path: '/hello',
       name: 'helloworld',
       component: HelloWord,
+  },
+  {
+      path: '/home',
+      name: 'home',
+      component: AppHome,
   }
 ]
 
@@ -26,19 +32,14 @@ router.beforeEach(async (to, from, next) => {
     try {
         await store.dispatch('check')
 
-        if (to.name == 'login') {
-            next()
-        }
-        else {
-            // store.dispatch('toggleNavbar', true)
+        let page = store.getters.pages.find((page) => page.name === to.name)
+        if(page.name == to.name){
             next()
         }
     }
     catch (error) {
         store.dispatch('destroySession')
-
         if (to.name == 'login') {
-            // store.dispatch('toggleNavbar', false)
             next()
         }
         else {
