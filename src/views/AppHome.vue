@@ -6,6 +6,7 @@
     setup() {
       const store = useStore()
       const router = useRouter()
+      let pages = store.getters.pages
       const logout = async () => {
           try {
               await store.dispatch('logout')
@@ -15,7 +16,7 @@
               // handleErrors(error)
           }
       }
-      return {logout}
+      return {pages, logout}
     }
 	}
 </script>
@@ -40,7 +41,7 @@
 
       <div id="navbarExampleTransparentExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="https://bulma.io/"> Todos los roles </a>
+          <router-link v-for="page in pages" :key="page" :to="page.name_component" class="navbar-item">{{ page.name }}</router-link>
         </div>
 
         <div class="navbar-end">
