@@ -17,7 +17,7 @@ const routes = [
       component: HelloWord,
   },
   {
-      path: '/home',
+      path: '/AppHome',
       name: 'home',
       component: AppHome,
   }
