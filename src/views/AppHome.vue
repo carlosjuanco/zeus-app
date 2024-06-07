@@ -60,14 +60,10 @@
         </div>
       </div>
     </nav>
-  </div>
-  <section class="hero is-link is-fullheight">
-    <div class="hero-body">
-      <div class="">
-        <p class="title">Link hero</p>
-        <p class="subtitle">Link subtitle</p>
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <router-view name="sidebar"></router-view>
       </div>
-    </div>
-  </section>
-  <router-view></router-view>
+    </section>
+  </div>
 </template>
