@@ -1,9 +1,10 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router"
 import store from '../store/index.js'
 
-import AppLogin from "../views/AppLogin.vue";
-import HelloWord from "../components/HelloWorld.vue";
-import AppHome from "../views/AppHome.vue";
+import AppLogin from "../views/AppLogin.vue"
+import HelloWord from "../components/HelloWorld.vue"
+import AppHome from "../views/AppHome.vue"
+
 
 const routes = [
   {
