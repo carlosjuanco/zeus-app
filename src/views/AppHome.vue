@@ -60,7 +60,7 @@
         </div>
       </div>
     </nav>
-    <section class="hero is-fullheight">
+    <section class="hero is-info is-fullheight">
       <div class="hero-body">
         <router-view name="sidebar"></router-view>
       </div>
