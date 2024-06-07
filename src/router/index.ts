@@ -5,7 +5,6 @@ import AppLogin from "../views/AppLogin.vue"
 import HelloWord from "../components/HelloWorld.vue"
 import AppHome from "../views/AppHome.vue"
 
-
 const routes = [
   {
       path: '/appLogin',
@@ -19,7 +18,7 @@ const routes = [
   },
   {
       path: '/AppHome',
-      name: 'home',
+      name: 'Inicio',
       component: AppHome,
   }
 ]
